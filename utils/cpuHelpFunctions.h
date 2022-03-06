@@ -1,5 +1,5 @@
-#ifndef HELP_FUNCTIONS__
-#define HELP_FUNCTIONS__
+#ifndef CPU_HELP_FUNCTIONS__
+#define CPU_HELP_FUNCTIONS__
 
 #include <stdio.h>
 #include <assert.h>
@@ -8,6 +8,6 @@
 #define MAX(a,b) (a > b ? a : b)
 #endif
 
-void printDeviceProperties();
+void printCodeInfo();
 
 #endif

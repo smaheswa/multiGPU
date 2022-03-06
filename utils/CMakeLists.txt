@@ -1,5 +1,6 @@
 set(UTILS_SRC
 	${PROJECT_SOURCE_DIR}/utils/printDeviceProps.cu
+	${PROJECT_SOURCE_DIR}/utils/cpuUtils.cpp
 )
 
 add_library(libutils STATIC ${UTILS_SRC})

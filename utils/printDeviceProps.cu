@@ -9,14 +9,13 @@ void printDeviceProperties(){
 	cudaGetDevice(&devID);
 	cudaGetDeviceProperties(&props, devID);
 	std::cout<< 
-		" Device: " << devID << "\n" << 
-		" with compute: " << props.name << "\n" <<
-		" capability: " <<props.name << "." << props.minor << "\n" <<  
-		" totalGlobalMemory: " << props.totalGlobalMem << "\n" << 
-		" sharedMemPerBlock: " << props.sharedMemPerBlock << "\n" <<
-		" maxThreadsPerBlock: " << props.maxThreadsPerBlock << "\n" <<
-		" totalConstantMemory: " << props.totalConstMem << "\n" << 
-		" compute Mode: " << props.computeMode << "\n" << 
-		" ECC enabled: " << props.ECCEnabled << std::endl;
-
+		"\tDevice: " << devID << "\n" << 
+		"\twith compute: " << props.name << "\n" <<
+		"\tcapability: " <<props.name << "." << props.minor << "\n" <<  
+		"\ttotalGlobalMemory: " << props.totalGlobalMem << "\n" << 
+		"\tsharedMemPerBlock: " << props.sharedMemPerBlock << "\n" <<
+		"\tmaxThreadsPerBlock: " << props.maxThreadsPerBlock << "\n" <<
+		"\totalConstantMemory: " << props.totalConstMem << "\n" << 
+		"\tcompute Mode: " << props.computeMode << "\n" << 
+		"\tECC enabled: " << props.ECCEnabled << std::endl;
 }
