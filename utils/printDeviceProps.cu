@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include <iostream>
 
 
-void testSimplePrint(){
+void printDeviceProperties(){
 
 	int devID;
 	cudaDeviceProp props;
@@ -20,11 +19,4 @@ void testSimplePrint(){
 		" compute Mode: " << props.computeMode << "\n" << 
 		" ECC enabled: " << props.ECCEnabled << std::endl;
 
-	//printf("Device %d: \"%s\" with compute %d.%d capability\n",
-//			devID, props.name, props.major, props.minor)
-}
-int main(int argc, char **argv) {
-
-	testSimplePrint();
-	return 0;
 }
