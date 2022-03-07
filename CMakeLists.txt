@@ -32,7 +32,8 @@ configure_file("${CMAKE_SOURCE_DIR}/config.h.in"
 				"${CMAKE_BINARY_DIR}/config.h")
 ## Defining the bin directory allows the "config.h" file to be used throughout
 ## the program
-include_directories(${CMAKE_BINARY_DIR})
+include_directories(
+		${CMAKE_BINARY_DIR})
 add_subdirectory(utils)
 
 message(STATUS "Cuda Include directories: ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES}")
@@ -40,4 +41,6 @@ message(STATUS "Cuda Include directories: ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORI
 add_executable(testPrint ${CMAKE_SOURCE_DIR}/src/testPrint.cpp)
 target_link_libraries(testPrint PRIVATE libutils)
 
-
+add_executable(vecAdd ${CMAKE_SOURCE_DIR}/src/vectorAdd.cu)
+target_include_directories(vecAdd PUBLIC ${CMAKE_SOURCE_DIR})
+target_link_libraries(vecAdd PRIVATE libutils)
